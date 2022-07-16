@@ -1,0 +1,48 @@
+{
+  "name": "electron-cli",
+  "version": "1.0.0",
+  "description": "ATSLotus-electron-cli",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package && electron-forge package --arch x64 --platform win32",
+    "make": "electron-forge make && electron-forge make --arch x64 --platform win32"
+  },
+  "author": "ATSLotus",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.64",
+    "@electron-forge/maker-deb": "^6.0.0-beta.64",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.64",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
+    "@electron-forge/maker-zip": "^6.0.0-beta.64",
+    "electron": "^19.0.8",
+    "electron-winstaller": "^5.0.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "appVersion": "1.0.0",
+        "name": "electron-cli",
+        "appCopyright": "ATSLotus(441321034@qq.com)",
+        "icon": "./app/static/img/appIcon/appicon",
+        "win32metadata": {
+          "ProductName": "electron-cli Windows",
+          "FileDescription": "electron-cli"
+        }
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin",
+            "win32"
+          ]
+        }
+      ]
+    }
+  }
+}
