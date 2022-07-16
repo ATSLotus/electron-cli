@@ -14,9 +14,9 @@ function createWindow () {
     // })
 
     //MacOS or Linux
-    globalShortcut.register('Command+Shift+i',() => {
-        win.webContents.openDevTools()
-    })
+    // globalShortcut.register('Command+Shift+i',() => {
+    //     win.webContents.openDevTools()
+    // })
 }
 
 app.whenReady().then(() => {
